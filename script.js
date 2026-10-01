@@ -18,7 +18,14 @@ function createGrid(size) {
         container.appendChild(square);
 
         square.addEventListener("mouseenter", function () {
-            square.style.backgroundColor = "black";
+            square.addEventListener("mouseenter", function () {
+
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+
+    square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+});
         });
     }
 }
